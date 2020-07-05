@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormatClip.Windows", "Forma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatClip.Core.Tests", "FormatClip.Core.Tests\FormatClip.Core.Tests.csproj", "{0C3D886D-8BAD-4CD6-9471-24613BD35400}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormatClip.Core.Performance", "FormatClip.Core.Performance\FormatClip.Core.Performance.csproj", "{4EEFF232-60B7-481A-8936-46CBD9698D34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0C3D886D-8BAD-4CD6-9471-24613BD35400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C3D886D-8BAD-4CD6-9471-24613BD35400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C3D886D-8BAD-4CD6-9471-24613BD35400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EEFF232-60B7-481A-8936-46CBD9698D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEFF232-60B7-481A-8936-46CBD9698D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EEFF232-60B7-481A-8936-46CBD9698D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEFF232-60B7-481A-8936-46CBD9698D34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
