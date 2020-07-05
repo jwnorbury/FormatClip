@@ -41,14 +41,14 @@ namespace FormatClip.Core.Tests
         public void EmptyInput_ReturnEmptyFormatter()
         {
             var formatter = FormatterFactory.Create(string.Empty);
-            Assert.IsType<EmptyFormatter>(formatter);
+            Assert.IsType<PassThroughFormatter>(formatter);
         }
 
         [Fact]
         public void NullInput_ReturnEmptyFormatter()
         {
             var formatter = FormatterFactory.Create(null);
-            Assert.IsType<EmptyFormatter>(formatter);
+            Assert.IsType<PassThroughFormatter>(formatter);
         }
 
         [Fact]
@@ -56,7 +56,7 @@ namespace FormatClip.Core.Tests
         {
             var input = "0d599f0ec05c3bda8c3b8a68c32a1b47";
             var formatter = FormatterFactory.Create(input);
-            Assert.IsType<EmptyFormatter>(formatter);
+            Assert.IsType<PassThroughFormatter>(formatter);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace FormatClip.Core
         {
             if (string.IsNullOrWhiteSpace(input))
             {
-                return new EmptyFormatter();
+                return new PassThroughFormatter(input);
             }
 
             return input.AsSpan().TrimStart()[0] switch
@@ -21,7 +21,7 @@ namespace FormatClip.Core
                 '<' => new XmlFormatter(input),
                 '{' => new JsonFormatter(input),
                 '[' => new JsonFormatter(input),
-                _ => new EmptyFormatter()
+                _ => new PassThroughFormatter(input)
             };
         }
     }

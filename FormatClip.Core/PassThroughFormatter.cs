@@ -3,15 +3,15 @@
     /// <summary>
     /// Formatter to handle invalid input.
     /// </summary>
-    public class EmptyFormatter : FormatterBase
+    public class PassThroughFormatter : FormatterBase
     {
-        public EmptyFormatter() : base(string.Empty)
+        public PassThroughFormatter(string input) : base(input)
         { }
 
         /// <summary>
-        /// Return an empty string.
+        /// Return the input.
         /// </summary>
-        /// <returns>string.Empty</returns>
+        /// <returns>Unmodified input.</returns>
         public override string Format() => Input;
     }
 }
