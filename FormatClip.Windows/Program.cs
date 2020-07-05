@@ -12,7 +12,7 @@ namespace FormatClip.Windows
             var input = GetInput(args);
             var writer = FormatterFactory.Create(input);
             var result = writer.Format();
-            if (!input.Equals(result))
+            if (!string.IsNullOrWhiteSpace(result) && !result.Equals(input))
             {
                 Clipboard.SetText(result);
             }
