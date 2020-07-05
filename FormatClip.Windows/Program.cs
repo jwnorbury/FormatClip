@@ -1,6 +1,5 @@
 ﻿using FormatClip.Core;
 using System;
-using System.Diagnostics;
 using System.Windows;
 
 namespace FormatClip.Windows
