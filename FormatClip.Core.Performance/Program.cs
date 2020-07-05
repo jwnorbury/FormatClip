@@ -5,7 +5,7 @@ namespace FormatClip.Core.Performance
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             _ = BenchmarkRunner.Run<XmlPerformance>();
         }
