@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using Xunit;
 
 namespace FormatClip.Core.Tests
@@ -11,7 +12,7 @@ namespace FormatClip.Core.Tests
             var input = "<foo><bar/></foo>";
             var xmlFormatter = new XmlFormatter(input);
             var actual = xmlFormatter.Format();
-            var expected = "<foo>\r\n  <bar />\r\n</foo>";
+            var expected = $"<foo>{Environment.NewLine} <bar />{Environment.NewLine}</foo>";
             Assert.Equal(expected, actual);
         }
 
