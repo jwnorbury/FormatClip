@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Newtonsoft.Json;
 
 namespace FormatClip.Core
 {
@@ -7,8 +7,15 @@ namespace FormatClip.Core
     /// </summary>
     public class JsonFormatter : FormatterBase
     {
+        private readonly JsonSerializerSettings _jsonSerializerSettings;
+
         public JsonFormatter(string input) : base(input)
-        { }
+        {
+            _jsonSerializerSettings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+            };
+        }
 
         /// <summary>
         /// Format JSON input string.
@@ -16,7 +23,17 @@ namespace FormatClip.Core
         /// <returns>Formatted JSON string.</returns>
         public override string Format()
         {
-            throw new NotImplementedException();
+            object obj;
+            try
+            {
+                obj = JsonConvert.DeserializeObject(Input);
+            }
+            catch
+            {
+                return Input;
+            }
+
+            return JsonConvert.SerializeObject(obj, _jsonSerializerSettings);
         }
     }
 }

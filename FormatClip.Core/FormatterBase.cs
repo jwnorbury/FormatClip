@@ -2,9 +2,9 @@
 {
     public abstract class FormatterBase
     {
-        internal string Input { get; }
+        protected string Input { get; }
 
-        public FormatterBase(string input)
+        protected FormatterBase(string input)
         {
             Input = input;
         }
